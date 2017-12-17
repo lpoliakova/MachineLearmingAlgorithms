@@ -84,12 +84,6 @@ public class ForwardBackwardOut {
     }
 
     public static void printSequence(int[] sequence) {
-        System.out.println("Відповідь");
-        System.out.print("{");
-        for (int i = 0; i < sequence.length - 1; i++) {
-            System.out.print("S_" + (sequence[i] + 1) + ", ");
-        }
-        System.out.print("S_" + (sequence[sequence.length - 1] + 1) + "}");
-        System.out.println();
+        Common.printSequence(sequence);
     }
 }

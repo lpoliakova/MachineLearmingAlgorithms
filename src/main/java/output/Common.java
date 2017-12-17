@@ -8,7 +8,7 @@ public class Common {
                 System.out.format("%.4f ", matrix[line][col]);
             }
             if (line != matrix.length - 1) {
-                System.out.print(" | ");
+                System.out.print("| ");
             }
         }
         System.out.print(")");
@@ -27,5 +27,15 @@ public class Common {
 
     static void printScalar(double scalar) {
         System.out.format("%.4f", scalar);
+    }
+
+    static void printSequence(int[] sequence) {
+        System.out.println("Відповідь");
+        System.out.print("{");
+        for (int i = 0; i < sequence.length - 1; i++) {
+            System.out.print("S_" + (sequence[i] + 1) + ", ");
+        }
+        System.out.print("S_" + (sequence[sequence.length - 1] + 1) + "}");
+        System.out.println();
     }
 }
