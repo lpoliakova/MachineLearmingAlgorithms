@@ -1,14 +1,14 @@
 package viterbi;
 
-public class ViterbiOut {
-    public static void printFormulas() {
+class ViterbiOut {
+    static void printFormulas() {
         System.out.println("Формули");
         System.out.println("TSate[s,t] = max with sFrom from S from TState(sFrom, t - 1) * A(sFrom, s) * B(s, input(t)) )");
         System.out.println("TIndex[s,t] = arg max with sFrom from S from TState(sFrom, t - 1) * A(sFrom, s) * B(s, input(t)) )");
         System.out.println();
     }
 
-    public static void printFirstTState(double[] P, double[][] B, int input, double[] TState) {
+    static void printFirstTState(double[] P, double[][] B, int input, double[] TState) {
         System.out.println("Початковий стан");
         for (int s = 0; s < P.length; s++) {
             System.out.print("TState[s=" + (s + 1) + ", t=1] = P(1) * B(" + (s + 1) + ", input(" + (input + 1) + ")) = ");
@@ -22,7 +22,7 @@ public class ViterbiOut {
         System.out.println();
     }
 
-    public static void printTStateS(double[][] A, double[][] B, int input, double[] TState, double[] TStateS, double tState, int step, int state) {
+    static void printTStateS(double[][] A, double[][] B, int input, double[] TState, double[] TStateS, double tState, int step, int state) {
         System.out.print("TState[s=" + (state + 1) + ", t=" + (step + 1) + "] = max( ");
         for (int s = 0; s < TStateS.length; s++) {
             System.out.print("TState(" + (s + 1) + ", " + step + ") * ");
@@ -59,7 +59,7 @@ public class ViterbiOut {
         System.out.println();
     }
 
-    public static void printTStateAndTSequence(double[][] TState, int[][] TIndex) {
+    static void printTStateAndTSequence(double[][] TState, int[][] TIndex) {
         System.out.println();
         System.out.print("TState = (");
         for (int s = 0; s < TState[0].length; s++) {
@@ -85,7 +85,7 @@ public class ViterbiOut {
         System.out.println();
     }
 
-    public static void printSequence(int[] sequence) {
+    static void printSequence(int[] sequence) {
         System.out.println("Відповідь");
         System.out.print("{");
         for (int i = 0; i < sequence.length - 1; i++) {
@@ -95,7 +95,7 @@ public class ViterbiOut {
         System.out.println();
     }
 
-    static void printScalar(double scalar) {
+    private static void printScalar(double scalar) {
         System.out.format("%.4f", scalar);
     }
 }

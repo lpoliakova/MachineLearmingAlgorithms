@@ -1,6 +1,6 @@
 package forwardBackward;
 
-public class NumericOut {
+class NumericOut {
     static void printMatrix(double[][] matrix) {
         System.out.print("(");
         for (int line = 0; line < matrix.length; line++) {
@@ -16,8 +16,8 @@ public class NumericOut {
 
     static void printVector(double[] vector, boolean inLine) {
         System.out.print("(");
-        for (int i = 0; i < vector.length; i++) {
-            System.out.format("%.4f ", vector[i]);
+        for (double aVector : vector) {
+            System.out.format("%.4f ", aVector);
         }
         System.out.print(")");
         if (!inLine) {
