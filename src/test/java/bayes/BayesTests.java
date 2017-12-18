@@ -1,4 +1,4 @@
-package algorithms;
+package bayes;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BayesTests {
-    private final static double PRECISION = 0.000000000000000000000000001;
+    private final static double PRECISION = 0.0000000000000000000000001;
     private final static String[] CATEGORIES = {"America", "Europe"};
     private final static String[] WORDS = {"New", "York", "Mexico", "San", "Francisco", "Denver", "Washington", "Chicago", "Michigan",
             "Seattle", "Orleans", "London", "Dover", "Castle", "Manchester", "Kyiv", "Brest", "Budapest"};

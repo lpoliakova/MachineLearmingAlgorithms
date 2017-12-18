@@ -1,4 +1,4 @@
-package algorithms;
+package viterbi;
 
 import org.junit.Assert;
 import org.junit.Test;

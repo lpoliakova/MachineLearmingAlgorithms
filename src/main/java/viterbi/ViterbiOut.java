@@ -1,4 +1,4 @@
-package output;
+package viterbi;
 
 public class ViterbiOut {
     public static void printFormulas() {
@@ -12,11 +12,11 @@ public class ViterbiOut {
         System.out.println("Початковий стан");
         for (int s = 0; s < P.length; s++) {
             System.out.print("TState[s=" + (s + 1) + ", t=1] = P(1) * B(" + (s + 1) + ", input(" + (input + 1) + ")) = ");
-            Common.printScalar(P[s]);
+            printScalar(P[s]);
             System.out.print(" * ");
-            Common.printScalar(B[s][input]);
+            printScalar(B[s][input]);
             System.out.print(" = ");
-            Common.printScalar(TState[s]);
+            printScalar(TState[s]);
             System.out.println();
         }
         System.out.println();
@@ -36,11 +36,11 @@ public class ViterbiOut {
 
         System.out.print("\t= max ( ");
         for (int s = 0; s < TStateS.length; s++) {
-            Common.printScalar(TState[s]);
+            printScalar(TState[s]);
             System.out.print(" * ");
-            Common.printScalar(A[s][state]);
+            printScalar(A[s][state]);
             System.out.print(" * ");
-            Common.printScalar(B[state][input]);
+            printScalar(B[state][input]);
             if (s != TStateS.length - 1) {
                 System.out.print(", ");
             }
@@ -48,14 +48,14 @@ public class ViterbiOut {
 
         System.out.print(" ) = max ( ");
         for (int s = 0; s < TStateS.length; s++) {
-            Common.printScalar(TStateS[s]);
+            printScalar(TStateS[s]);
             if (s != TStateS.length - 1) {
                 System.out.print(", ");
             }
         }
 
         System.out.print(" ) = ");
-        Common.printScalar(tState);
+        printScalar(tState);
         System.out.println();
     }
 
@@ -64,7 +64,7 @@ public class ViterbiOut {
         System.out.print("TState = (");
         for (int s = 0; s < TState[0].length; s++) {
             for (double[] tState : TState) {
-                Common.printScalar(tState[s]);
+                printScalar(tState[s]);
                 System.out.print(" ");
             }
             if (s != TState[0].length - 1) {
@@ -86,6 +86,16 @@ public class ViterbiOut {
     }
 
     public static void printSequence(int[] sequence) {
-        Common.printSequence(sequence);
+        System.out.println("Відповідь");
+        System.out.print("{");
+        for (int i = 0; i < sequence.length - 1; i++) {
+            System.out.print("S_" + (sequence[i] + 1) + ", ");
+        }
+        System.out.print("S_" + (sequence[sequence.length - 1] + 1) + "}");
+        System.out.println();
+    }
+
+    static void printScalar(double scalar) {
+        System.out.format("%.4f", scalar);
     }
 }

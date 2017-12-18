@@ -1,8 +1,8 @@
-package utils;
+package forwardBackward;
 
-public class MatrixOperations {
+class MatrixOperations {
 
-    public static double[][] transpose(double[][] matrix) {
+    static double[][] transpose(double[][] matrix) {
         double[][] result = new double[matrix[0].length][matrix.length];
         for (int line = 0; line < matrix.length; line++) {
             for (int col = 0; col < matrix[0].length; col++) {
@@ -12,7 +12,7 @@ public class MatrixOperations {
         return result;
     }
 
-    public static double[] multiplyScalarAndVector(double scalar, double[] vector) {
+    static double[] multiplyScalarAndVector(double scalar, double[] vector) {
         double[] result = new double[vector.length];
         for (int i = 0; i < vector.length; i++) {
             result[i] = vector[i] * scalar;
@@ -20,7 +20,7 @@ public class MatrixOperations {
         return result;
     }
 
-    public static double[] multiplyMatrixAndVector(double[][] matrix, double[] vector) {
+    static double[] multiplyMatrixAndVector(double[][] matrix, double[] vector) {
         double[] result = new double[vector.length];
         for (int line = 0; line < vector.length; line++) {
             double lineResult = 0.0;
@@ -32,7 +32,7 @@ public class MatrixOperations {
         return result;
     }
 
-    public static double[][] multiplyTwoMatrices(double[][] first, double[][] second) {
+    static double[][] multiplyTwoMatrices(double[][] first, double[][] second) {
         if (first == null || second == null ||
                 first.length == 0 || second.length == 0 ||
                 first[0].length == second.length) {

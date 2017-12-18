@@ -1,4 +1,4 @@
-package algorithms;
+package bayes;
 
 import java.util.ArrayList;
 import java.util.Arrays;

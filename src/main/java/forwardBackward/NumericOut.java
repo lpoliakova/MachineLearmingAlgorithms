@@ -1,6 +1,6 @@
-package output;
+package forwardBackward;
 
-public class Common {
+public class NumericOut {
     static void printMatrix(double[][] matrix) {
         System.out.print("(");
         for (int line = 0; line < matrix.length; line++) {
@@ -23,10 +23,6 @@ public class Common {
         if (!inLine) {
             System.out.print("T");
         }
-    }
-
-    static void printScalar(double scalar) {
-        System.out.format("%.4f", scalar);
     }
 
     static void printSequence(int[] sequence) {

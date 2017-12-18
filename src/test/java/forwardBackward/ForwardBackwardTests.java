@@ -1,5 +1,6 @@
-package algorithms;
+package forwardBackward;
 
+import forwardBackward.ForwardBackward;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,6 +1,4 @@
-package algorithms;
-
-import output.ViterbiOut;
+package viterbi;
 
 import java.util.Arrays;
 

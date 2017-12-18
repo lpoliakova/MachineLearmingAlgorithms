@@ -1,7 +1,4 @@
-package algorithms;
-
-import output.ForwardBackwardOut;
-import utils.MatrixOperations;
+package forwardBackward;
 
 import java.util.Arrays;
 
