@@ -1,1 +1,2 @@
-web: java target/test-classes/forwardBackward.ForwardBackwardTests
+web: java -jar target/MachineLearmingAlgorithms-1.0-SNAPSHOT.jar
+
